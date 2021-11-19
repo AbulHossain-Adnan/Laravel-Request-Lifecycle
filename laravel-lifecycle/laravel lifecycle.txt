@@ -1,0 +1,44 @@
+Laravel Request Lifecycle
+-------------------------
+1.Auto Loader:
+------------
+The entry point for all requests to a laravel application is the public/index.
+php file
+All requests are derected to this file by your web 
+server(apache/Nginx)configaration.The index.php file donen't comtain much code.
+rather its a starting point for loading rest of the famwork.
+its loads all auto loader files that we are create throw composer.
+
+2.Karnel:
+------------
+Next step will occur on the kernel part of the application.our all sending 
+request will come
+aither http kernel or console kernel.HTTP kernel is just recive a request 
+and return a response.bootstrapper are
+defined by kernel class.its help to error handling,confiure logging,detect 
+enviroments and other tast to be done
+befor request handling.
+
+3.Service Providers
+---------------------
+Next step for kernel is to load service providers as bootstrapping actions.
+service providers have to method one is registered and onother is boot method.
+when register method called then registered all service providers and after registred
+all service provider then boot method will be called.
+
+4.Dispatch Request:
+-------------------
+Once the application have beed bootstrapped and all service providers are registered
+and booted,the request will be handed over to ther router for dispatching.
+the request will dispatch to a route or controller ,as well as run any route specific
+middleware
+
+5.Router:
+--------
+Now request will be dispatched by the Router and it will end up with the views
+
+Router will direct the HTTP Request to a Controller or return a view or responses directly by omitting the controller. These routes will be placed in app/routes.php.
+
+Controller app/controllers/ performs specific actions and sends data to a View.
+
+View app/views/ formats the data appropriately, providing the HTTP Response.
