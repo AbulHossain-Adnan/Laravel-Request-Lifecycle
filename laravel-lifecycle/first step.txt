@@ -1,0 +1,8 @@
+1.Auto Loader:
+------------
+The entry point for all requests to a laravel application is the public/index.
+php file
+All requests are derected to this file by your web 
+server(apache/Nginx)configaration.The index.php file donen't comtain much code.
+rather its a starting point for loading rest of the famwork.
+its loads all auto loader files that we are create throw composer.
