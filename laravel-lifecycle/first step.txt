@@ -6,3 +6,14 @@ All requests are derected to this file by your web
 server(apache/Nginx)configaration.The index.php file donen't comtain much code.
 rather its a starting point for loading rest of the famwork.
 its loads all auto loader files that we are create throw composer.
+
+
+2.Karnel:
+------------
+Next step will occur on the kernel part of the application.our all sending 
+request will come
+aither http kernel or console kernel.HTTP kernel is just recive a request 
+and return a response.bootstrapper are
+defined by kernel class.its help to error handling,confiure logging,detect 
+enviroments and other tast to be done
+befor request handling.
