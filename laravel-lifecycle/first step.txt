@@ -33,3 +33,14 @@ Once the application have beed bootstrapped and all service providers are regist
 and booted,the request will be handed over to ther router for dispatching.
 the request will dispatch to a route or controller ,as well as run any route specific
 middleware
+
+
+5.Router:
+--------
+Now request will be dispatched by the Router and it will end up with the views
+
+Router will direct the HTTP Request to a Controller or return a view or responses directly by omitting the controller. These routes will be placed in app/routes.php.
+
+Controller app/controllers/ performs specific actions and sends data to a View.
+
+View app/views/ formats the data appropriately, providing the HTTP Response.
