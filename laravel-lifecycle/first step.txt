@@ -25,3 +25,11 @@ Next step for kernel is to load service providers as bootstrapping actions.
 service providers have to method one is registered and onother is boot method.
 when register method called then registered all service providers and after registred
 all service provider then boot method will be called.
+
+
+4.Dispatch Request:
+-------------------
+Once the application have beed bootstrapped and all service providers are registered
+and booted,the request will be handed over to ther router for dispatching.
+the request will dispatch to a route or controller ,as well as run any route specific
+middleware
